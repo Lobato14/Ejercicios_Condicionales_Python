@@ -12,12 +12,5 @@ def edadEscrita(edad):
         return "Número incorrecto"
 
 if __name__=="__main__":
-    while True:
-        try:
-            edad = int(input("Escribe su edad: "))
-            print(edadEscrita(edad))
-            if edad > 0:
-                break
-        except ValueError:
-            print("Por favor, introduce un número entero válido.")
-    
+    edad = int(input("Escriba su edad: "))
+    print(edadEscrita(edad))
