@@ -8,7 +8,7 @@ def almacenaContrasenia(contrasena_usuario):
     if contrasena_usuario.lower() == contrasena_guardada.lower():
         return "Contraseña correcta. ¡Bienvenido!"
     else:
-        return "Contraseña incorrecta. Intenta de nuevo."
+        return "Contraseña incorrecta. Intentalo de nuevo."
 
 if __name__=="__main__":
     contrasenia = input("Escriba su contraseña: ")
