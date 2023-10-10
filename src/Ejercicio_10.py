@@ -10,27 +10,19 @@
 # están en todas la pizzas. Al final se debe mostrar por pantalla si la pizza elegida es 
 # vegetariana o no y todos los ingredientes que lleva.
 
-def crear_pizza(tipo_pizza):
+def crear_pizza(tipo_pizza, ingrediente_elegido=None):
     ingredientes_comunes = ["mozzarella", "tomate"]
     if tipo_pizza == "sí":
         print("Ingredientes disponibles para pizza vegetariana: Pimiento y Tofu.")
-        ingrediente_elegido = input("Elija un ingrediente: ").capitalize()
-        if ingrediente_elegido in ["Pimiento", "Tofu"]:
-            ingredientes_comunes.append(ingrediente_elegido)
+        if ingrediente_elegido and ingrediente_elegido.capitalize() in ["Pimiento", "Tofu"]:
+            ingredientes_comunes.append(ingrediente_elegido.capitalize())
         else:
             print("Ingrediente no válido. Se añadirá mozzarella y tomate solamente.")
     else:
         print("Ingredientes disponibles para pizza no vegetariana: Peperoni, Jamón y Salmón.")
-        ingrediente_elegido = input("Elija un ingrediente: ").capitalize()
-        if ingrediente_elegido in ["Peperoni", "Jamón", "Salmón"]:
-            ingredientes_comunes.append(ingrediente_elegido)
+        if ingrediente_elegido and ingrediente_elegido.capitalize() in ["Peperoni", "Jamón", "Salmón"]:
+            ingredientes_comunes.append(ingrediente_elegido.capitalize())
         else:
             print("Ingrediente no válido. Se añadirá mozzarella y tomate solamente.")
 
     return ingredientes_comunes
-
-if __name__ == "__main__":
-    tipo_pizza = input("¿Quiere una pizza vegetariana? (Sí/No): ").lower()
-    ingredientes = crear_pizza(tipo_pizza)
-    tipo = "vegetariana" if tipo_pizza == "sí" else "no vegetariana"
-    print(f"Su pizza es {tipo} y lleva los siguientes ingredientes: {', '.join(ingredientes)}")
