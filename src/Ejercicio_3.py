@@ -5,10 +5,10 @@ def divisionDosNum(numero1, numero2):
     if numero2 == 0:
         return "Error: No se puede dividir por cero."
     elif numero1 < 0 or numero2 < 0:
-        return "El número no puede ser menor."
+        return "El número no puede ser menor a 0."
     else:
         resultado = numero1 / numero2
-        return "El resultado es: {}".format(resultado)
+        return "El resultado es: " + str(resultado)
 
 if __name__=="__main__":
     numero1 = int(input("Escriba un número: "))
