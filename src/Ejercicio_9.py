@@ -6,7 +6,7 @@
 # de 18 años, 10€.
 
 def mostrarPrecio(edad):
-    if edad < 0:
+    if edad <= 0:
         return "Error, no se puede introducir un número menor a 0."
     elif edad < 4:
         return "¡Puedes entrar gratis!"
