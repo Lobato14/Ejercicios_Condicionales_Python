@@ -13,3 +13,21 @@
 
 # Escribir un programa que lea la puntuación del usuario e indique su nivel de rendimiento, 
 # así como la cantidad de dinero que recibirá el usuario.
+
+def evaluarEmple(puntuacion):
+    if puntuacion < 0.0:
+        return "Error, su puntuación no puede ser menor que 0."
+    elif puntuacion < 0.4:
+        resultado = puntuacion * 2400
+        return "Su nivel de rendimiento es Inaceptable.\nSu cantidad anual es de " + str(resultado) + "€"
+    elif puntuacion >= 0.4 and puntuacion < 0.6:
+        resultado = puntuacion * 2400
+        return "Su nivel de rendimiento es Aceptable.\nSu cantidad anual es de " + str(resultado) + "€"
+    elif puntuacion >= 0.6:
+        resultado = puntuacion * 2400
+        return "Su nivel de rendimiento es Meritorio.\nSu cantidad anual es de " + str(resultado) + "€"
+
+if __name__ == "__main__":
+    puntuacion = float(input("Escriba su puntuación: "))
+    resultado = evaluarEmple(puntuacion)
+    print(resultado)
