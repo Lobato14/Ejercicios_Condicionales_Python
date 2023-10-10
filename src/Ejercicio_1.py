@@ -13,4 +13,5 @@ def edadEscrita(edad):
 
 if __name__=="__main__":
     edad = int(input("Escriba su edad: "))
-    print(edadEscrita(edad))
+    resultEdad = edadEscrita(edad)
+    print(resultEdad)
