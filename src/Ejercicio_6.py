@@ -5,18 +5,18 @@
 # el grupo que le corresponde.
 
 def divisionGrupo(nombre, sexo):
+    primera_letra = nombre[0].lower()
     if sexo == "M":
-        if nombre.lower() < "m":
+        if primera_letra < "m":
             grupo = "A"
         else:
             grupo = "B"
     else:
-        if nombre.lower() > "n":
+        if primera_letra > "n":
             grupo = "A"
         else:
             grupo = "B"
     return grupo
-
 if __name__ == "__main__":
     nombre = input("Escribe tu nombre: ")
     sexo = input("¿Cuál es tu sexo (M o H)?: ")
