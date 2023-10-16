@@ -26,3 +26,15 @@ def crear_pizza(tipo_pizza, ingrediente_elegido=None):
             print("Ingrediente no válido. Se añadirá mozzarella y tomate solamente.")
 
     return ingredientes_comunes
+
+if __name__ == "__main__":
+    tipo_pizza = input("¿Deseas una pizza vegetariana? (sí/no): ").lower()
+    ingrediente_elegido = input("Elige un ingrediente (pimiento/tofu/peperoni/jamón/salmón): ").capitalize()
+    ingredientes_pizza = crear_pizza(tipo_pizza, ingrediente_elegido)
+    if tipo_pizza == "sí":
+        print("Has elegido una pizza vegetariana con los siguientes ingredientes:")
+    else:
+        print("Has elegido una pizza no vegetariana con los siguientes ingredientes:")
+    
+    print(", ".join(ingredientes_pizza))
+    
